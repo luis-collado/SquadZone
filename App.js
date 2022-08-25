@@ -6,6 +6,7 @@ import Ionic from "react-native-vector-icons/Ionicons";
 import {NavigationContainer} from "@react-navigation/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useFonts } from 'expo-font';
 import Home from './src/components/screens/Home';
 import News from './src/components/screens/News';
 import Search from './src/components/screens/Search';
@@ -13,10 +14,14 @@ import Profile from './src/components/screens/Profile';
 
 
 const App = () => {
+  const [fontsLoaded] = useFonts({
+    'CODE-Bold': require('./assets/fonts/CODE-Bold.otf'),
+  });
+  
   const Stack = createNativeStackNavigator();
   const Tab = createBottomTabNavigator();
 
-  const bottomTabScreen = () => {
+  const BottomTabScreen = () => {
     return(
       <Tab.Navigator
       screenOptions={({route}) => ({
@@ -58,7 +63,7 @@ const App = () => {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="Bottom" component={bottomTabScreen}/>
+        <Stack.Screen name="Bottom" component={BottomTabScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
