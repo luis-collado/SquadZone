@@ -34,14 +34,17 @@ const App = () => {
         tabBarIcon: ({focused, size, colour}) => {
           let iconName;
           if(route.name === "Home"){
-            iconName= focused ? "home-sharp" : "home-outline";
+            iconName= focused ? "home-sharp" : "ios-home-outline";
             size = focused ? size + 8 : size + 2;
           }else if(route.name === "News"){
             iconName= focused ? "megaphone" : "ios-megaphone-outline";
+            size = focused ? size + 8 : size + 2;
           }else if(route.name === "Search"){
             iconName= focused ? "shield" : "ios-shield-outline";
+            size = focused ? size + 8 : size + 2;
           }else if(route.name === "Profile"){
             iconName= focused ? "person" : "ios-person-outline";
+            size = focused ? size + 8 : size + 2;
           }
 
           return <Ionic name={iconName} size={size} color={colour}/>

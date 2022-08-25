@@ -19,7 +19,7 @@ const Home = () => {
                 <Text style={{fontFamily: 'CODE-Bold', fontSize:24, fontWeight: '500'}}>
                     SQUAD Z<Ionic name='football-outline' style={{fontSize:23}}/>NE
                 </Text>
-                <Ionic name='map' style={{fontSize:25}}/>
+                <Ionic name='map-sharp' style={{fontSize:25}}/>
             </View>
         </View>
     </SafeAreaView>

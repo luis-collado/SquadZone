@@ -19,7 +19,7 @@ const News = () => {
                 <Text style={{fontFamily: 'CODE-Bold', fontSize:24, fontWeight: '500'}}>
                     SQUAD Z<Ionic name='football-outline' style={{fontSize:23}}/>NE
                 </Text>
-                <Ionic name='paper-plane' style={{fontSize:25}}/>
+                <Ionic name='paper-plane-sharp' style={{fontSize:25}}/>
                 
             </View>
         </View>
