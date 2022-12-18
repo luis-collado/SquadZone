@@ -11,6 +11,7 @@ import Home from './src/components/screens/Home';
 import News from './src/components/screens/News';
 import Search from './src/components/screens/Search';
 import Profile from './src/components/screens/Profile';
+import Login from './src/components/screens/Login';
 
 
 const App = () => {
@@ -63,10 +64,12 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
+      initialRouteName="Login"
         screenOptions={{
           headerShown: false,
         }}>
         <Stack.Screen name="Bottom" component={BottomTabScreen}/>
+        <Stack.Screen name="Login" component={Login}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

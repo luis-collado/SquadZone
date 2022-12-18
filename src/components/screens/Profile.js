@@ -1,4 +1,4 @@
-import { View, Text, StatusBar } from 'react-native'
+import { View, Text, StatusBar, Image  } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionic from "react-native-vector-icons/Ionicons";
@@ -20,6 +20,19 @@ const Profile = () => {
                     SQUAD Z<Ionic name='football-outline' style={{fontSize:23}}/>NE
                 </Text>
                 <Ionic name='options' style={{fontSize:25}}/>
+            </View>
+                <View style={{
+                justifyContent: 'space-between',
+                flexDirection:'row',
+                paddingHorizontal: 15,
+                paddingTop: 15,
+                alignItems: 'center',
+                margin: 20
+                }}>
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <Image source={require('../../../assets/icon.png')} style={{width: 70, height: 70, borderRadius: 50}} />
+                    <Text style={{fontSize:18, fontWeight: '500', marginLeft: 20}}>@username</Text>
+                </View>
             </View>
         </View>
     </SafeAreaView>
